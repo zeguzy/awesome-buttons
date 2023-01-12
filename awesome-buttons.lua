@@ -184,11 +184,16 @@ buttons.with_widget = function(args)
     local widget = args.widget or {}
     local onclick = args.onclick or function() end
     local color = args.color or '#D8DEE9'
+    local margin = args.margin or 4 
+    local  top = args.top or margin
+    local bottom = args.bottom or margin
+    local left =args.left or margin
+    local right = args.right or margin
 
     local result = wibox.widget{
         {
             widget,
-            top = 4, bottom = 4, left = 8, right = 8,
+            top  =top , bottom = bottom, left= left, right = right,
             widget = wibox.container.margin
         },
         bg = '#00000000',
